@@ -307,7 +307,7 @@ a { text-decoration: none; color: inherit; }
   width: 52%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 82% center;
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
   opacity: 0.55;
   pointer-events: none;
@@ -382,7 +382,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 3.25rem 3.5rem;
+  padding: 2.85rem 3.05rem;
   background: rgba(10,10,10,0.72);
   border: 1px solid rgba(255,255,255,0.08);
   border-top: 4px solid var(--red);
@@ -390,47 +390,47 @@ a { text-decoration: none; color: inherit; }
   -webkit-backdrop-filter: blur(6px);
 }
 .hero-phone-icon {
-  width: 90px;
-  height: 90px;
+  width: 79px;
+  height: 79px;
   border-radius: 50%;
   background: var(--red);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.35rem;
-  box-shadow: 0 0 0 9px rgba(212,0,0,0.16);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 0 8px rgba(212,0,0,0.16);
   transition: box-shadow 0.2s, background 0.2s;
 }
-.hero-phone-icon i { font-size: 44px; color: #fff; }
+.hero-phone-icon i { font-size: 39px; color: #fff; }
 .hero-phone-label {
   font-family: var(--font-display);
-  font-size: 16px;
-  letter-spacing: 3.5px;
+  font-size: 14px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gray-mid);
   font-weight: 600;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.57rem;
 }
 .hero-phone-num {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 62px;
+  font-size: 54px;
   color: var(--white);
   line-height: 0.95;
   letter-spacing: 0.5px;
   transition: color 0.2s;
 }
 .hero-phone-sub {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--gray-light);
   line-height: 1.5;
-  max-width: 290px;
-  margin-top: 0.9rem;
+  max-width: 255px;
+  margin-top: 0.8rem;
 }
 .hero-phone:hover .hero-phone-num { color: var(--red); }
 .hero-phone:hover .hero-phone-icon {
   background: var(--red-dark);
-  box-shadow: 0 0 0 9px rgba(212,0,0,0.22);
+  box-shadow: 0 0 0 8px rgba(212,0,0,0.22);
 }
 
 .hero-badge {
@@ -488,6 +488,37 @@ a { text-decoration: none; color: inherit; }
 /* ── SECTION COMMONS ── */
 .section { padding: 5rem var(--gutter); }
 .section-alt { background: rgba(255, 255, 255, 0.035); }
+
+/* SVI text-logo brand placements */
+.page-hero-watermark {
+  position: absolute;
+  right: -2%;
+  bottom: 6%;
+  width: min(720px, 60%);
+  height: auto;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.cta-watermark {
+  display: block;
+  height: 30px;
+  width: auto;
+  margin-top: 1.75rem;
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+.cta-banner > div { position: relative; z-index: 1; }
+.reviews-logo {
+  display: block;
+  height: 26px;
+  width: auto;
+  margin: 0 0 1.5rem;
+  filter: brightness(0);
+  opacity: 0.8;
+}
 
 .section-label {
   display: flex;
@@ -1013,6 +1044,8 @@ a { text-decoration: none; color: inherit; }
 .cta-banner {
   background: var(--red);
   padding: 4rem var(--gutter);
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
