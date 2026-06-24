@@ -655,9 +655,9 @@ a { text-decoration: none; color: inherit; }
   background: #ffffff;
   padding: 2.25rem var(--gutter);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 .section-img-band img {
@@ -667,6 +667,7 @@ a { text-decoration: none; color: inherit; }
   object-fit: contain;
   opacity: 1;
 }
+.section-img-band .band-logo { height: 120px; }
 
 /* ── CINEMATIC BAND ── */
 .cinematic-band {
