@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SVI Automotive Equipment — Vancouver Island's Trusted Shop Equipment Source</title>
   <meta name="description" content="SVI Automotive Equipment — Vancouver Island's trusted source for automotive shop equipment. Authorized Atlas dealer. Vehicle lifts, tire changers, wheel balancers. Sales, install, and repair in Victoria, BC.">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -136,13 +136,11 @@
   <section class="section">
     <div class="section-label">See Us In Action</div>
     <h2 class="section-h2">Watch &amp; Learn</h2>
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/rEadxh43OnQ" title="Automotive Shop Equipment - Vancouver Island - Victoria BC" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-card-title">Shop Equipment on Vancouver Island</div>
-      </div>
+    <div class="video-feature">
+      <div class="video-embed"><div id="svi-feature-player"></div></div>
+      <div class="video-card-title">Automotive Shop Equipment — Vancouver Island, Victoria BC</div>
+    </div>
+    <div class="video-grid-2">
       <div class="video-card">
         <div class="video-embed">
           <iframe src="https://www.youtube-nocookie.com/embed/IWwlsQ-qajU" title="Automotive Lifts & Equipment Sales on Vancouver Island" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -272,6 +270,33 @@
       </div>
     </div>
   </footer>
+
+  <!-- Featured video: muted autoplay when scrolled into view (like the original SVI site) -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var sviPlayer, sviStarted = false;
+    function onYouTubeIframeAPIReady() {
+      sviPlayer = new YT.Player('svi-feature-player', {
+        videoId: 'rEadxh43OnQ',
+        playerVars: { mute: 1, playsinline: 1, rel: 0, controls: 1, modestbranding: 1 },
+        events: { onReady: sviObserve }
+      });
+    }
+    function sviObserve() {
+      var target = document.querySelector('.video-feature');
+      if (!('IntersectionObserver' in window) || !target) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting && en.intersectionRatio >= 0.5) {
+            try { sviPlayer.mute(); sviPlayer.playVideo(); sviStarted = true; } catch (e) {}
+          } else if (sviStarted) {
+            try { sviPlayer.pauseVideo(); } catch (e) {}
+          }
+        });
+      }, { threshold: [0, 0.5, 1] });
+      io.observe(target);
+    }
+  </script>
 
 </body>
 </html>
