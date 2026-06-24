@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Financing — SVI Automotive Equipment</title>
   <meta name="description" content="Get in touch with SVI Automotive Equipment. Request a quote, book a service call, or ask about financing. Victoria, BC — (250) 857-4665.">
-  <link rel="stylesheet" href="styles.css?v=21">
+  <link rel="stylesheet" href="styles.css?v=22">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -65,7 +65,11 @@
     <div class="form-grid">
       <div class="form-panel light">
         <div class="section-label" style="margin-bottom:1.5rem">Send a Message</div>
-        <form action="#" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" id="svi-contact-form">
+          <input type="hidden" name="access_key" value="aff35d53-0cb8-4a08-bd94-10f3b03e680d">
+          <input type="hidden" name="subject" value="New enquiry from the SVI Automotive website">
+          <input type="hidden" name="from_name" value="SVI Automotive Website">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
           <div class="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
             <div class="form-group" style="margin:0">
               <label for="first-name">First Name</label>
@@ -86,13 +90,13 @@
           </div>
           <div class="form-group">
             <label for="subject">What Can We Help With?</label>
-            <select id="subject" name="subject">
+            <select id="subject" name="enquiry_type">
               <option value="">— Select one —</option>
-              <option value="quote">Equipment Quote</option>
-              <option value="service">Service / Repair Call</option>
-              <option value="install">Installation Inquiry</option>
-              <option value="financing">Financing Question</option>
-              <option value="general">General Question</option>
+              <option value="Equipment Quote">Equipment Quote</option>
+              <option value="Service / Repair Call">Service / Repair Call</option>
+              <option value="Installation Inquiry">Installation Inquiry</option>
+              <option value="Financing Question">Financing Question</option>
+              <option value="General Question">General Question</option>
             </select>
           </div>
           <div class="form-group">
@@ -100,6 +104,7 @@
             <textarea id="message" name="message" placeholder="Tell us about your shop, what equipment you're looking at, or what's broken..."></textarea>
           </div>
           <button type="submit" class="btn-red" style="width:100%;text-align:center">Send Message</button>
+          <div id="svi-form-status" class="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
 
@@ -192,6 +197,46 @@
       </div>
     </div>
   </footer>
+
+  <!-- Contact form submit (Web3Forms) -->
+  <script>
+    (function () {
+      var form = document.getElementById('svi-contact-form');
+      var status = document.getElementById('svi-form-status');
+      if (!form || !status) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type=submit]');
+        var label = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        status.style.display = 'none';
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.success) {
+              form.reset();
+              status.className = 'form-status success';
+              status.textContent = "Thanks — your message has been sent. We'll be in touch shortly.";
+            } else {
+              status.className = 'form-status error';
+              status.textContent = 'Sorry, something went wrong. Please call us at (250) 857-4665.';
+            }
+            status.style.display = 'block';
+          })
+          .catch(function () {
+            status.className = 'form-status error';
+            status.textContent = 'Sorry, something went wrong. Please call us at (250) 857-4665.';
+            status.style.display = 'block';
+          })
+          .then(function () { btn.textContent = label; btn.disabled = false; });
+      });
+    })();
+  </script>
 
 </body>
 </html>

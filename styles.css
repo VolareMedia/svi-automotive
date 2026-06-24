@@ -1090,6 +1090,16 @@ a { text-decoration: none; color: inherit; }
 .form-panel.light .form-group select:focus,
 .form-panel.light .form-group textarea:focus { border-color: var(--red); }
 .form-panel.light select { color: #141414; }
+.form-status {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.form-status.success { background: #e7f6ec; color: #176c3a; border: 1px solid #b6e0c4; }
+.form-status.error { background: #fdeaea; color: #a32d2d; border: 1px solid #f3c0c0; }
 
 .info-block { margin-bottom: 2rem; }
 .info-block h4 {
