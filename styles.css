@@ -15,6 +15,8 @@
   --gray-dark: #909090;
   --font-display: 'Barlow Condensed', sans-serif;
   --font-body: 'Inter', sans-serif;
+  /* Centers content within a max width on wide screens, full-bleed backgrounds preserved */
+  --gutter: max(2.5rem, calc((100% - 1320px) / 2));
 }
 
 html { scroll-behavior: smooth; }
@@ -41,7 +43,7 @@ a { text-decoration: none; color: inherit; }
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0 2.25rem;
+  padding: 0 var(--gutter);
   gap: 1.5rem;
 }
 
@@ -100,7 +102,7 @@ a { text-decoration: none; color: inherit; }
   gap: 8px;
   flex-shrink: 0;
 }
-.nav-atlas img { height: 28px; width: auto; object-fit: contain; opacity: 0.85; }
+.nav-atlas img { height: 42px; width: auto; object-fit: contain; opacity: 1; }
 .nav-atlas-label {
   font-family: var(--font-display);
   font-size: 10px;
@@ -135,7 +137,7 @@ a { text-decoration: none; color: inherit; }
 .atlas-strip {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 1rem 2.5rem;
+  padding: 1rem var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,7 +149,7 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 1.5rem;
 }
-.atlas-strip img { height: 36px; width: auto; object-fit: contain; }
+.atlas-strip img { height: 60px; width: auto; object-fit: contain; }
 .atlas-strip-text {
   display: flex;
   flex-direction: column;
@@ -156,20 +158,20 @@ a { text-decoration: none; color: inherit; }
 .atlas-strip-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 19px;
   text-transform: uppercase;
   color: var(--white);
   letter-spacing: 0.5px;
 }
 .atlas-strip-sub {
-  font-size: 12px;
-  color: var(--gray-dark);
+  font-size: 13px;
+  color: var(--gray-mid);
 }
 .atlas-strip-dealer {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .nav-logo { flex-shrink: 0; }
@@ -218,9 +220,11 @@ a { text-decoration: none; color: inherit; }
   min-height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
   background: var(--black);
   overflow: hidden;
-  padding: 5rem 2.5rem;
+  padding: 5rem var(--gutter);
 }
 
 .hero-grid-bg {
@@ -328,11 +332,10 @@ a { text-decoration: none; color: inherit; }
 
 /* ── HERO PHONE CARD ── */
 .hero-phone {
-  position: absolute;
-  right: 5.5%;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
   z-index: 4;
+  flex-shrink: 0;
+  margin-right: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -418,7 +421,7 @@ a { text-decoration: none; color: inherit; }
 /* ── STATS STRIP ── */
 .stats-strip {
   background: var(--red);
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem var(--gutter);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -441,7 +444,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── SECTION COMMONS ── */
-.section { padding: 5rem 2.5rem; }
+.section { padding: 5rem var(--gutter); }
 .section-alt { background: var(--surface); }
 
 .section-label {
@@ -652,7 +655,7 @@ a { text-decoration: none; color: inherit; }
 /* ── PRODUCT HERO IMAGE BAND ── */
 .section-img-band {
   width: 100%;
-  height: 280px;
+  height: 460px;
   overflow: hidden;
   position: relative;
 }
@@ -660,14 +663,14 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
-  opacity: 0.45;
+  object-position: center 45%;
+  opacity: 1;
 }
 .section-img-band::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, var(--black) 100%);
+  background: linear-gradient(to bottom, rgba(10,10,10,0.25) 0%, transparent 18%, transparent 85%, var(--black) 100%);
 }
 
 /* ── WHY SVI ── */
@@ -688,7 +691,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 40px;
-  color: var(--surface-2);
+  color: var(--red);
   line-height: 1;
   min-width: 44px;
   flex-shrink: 0;
@@ -777,7 +780,7 @@ a { text-decoration: none; color: inherit; }
 /* ── CTA BANNER ── */
 .cta-banner {
   background: var(--red);
-  padding: 4rem 2.5rem;
+  padding: 4rem var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -862,7 +865,7 @@ a { text-decoration: none; color: inherit; }
 .page-hero {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 4rem 2.5rem;
+  padding: 4rem var(--gutter);
   position: relative;
   overflow: hidden;
 }
@@ -1020,7 +1023,7 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid var(--border);
 }
 .footer-main {
-  padding: 3.5rem 2.5rem;
+  padding: 3.5rem var(--gutter);
   display: grid;
   grid-template-columns: 2.5fr 1fr 1fr 1fr;
   gap: 2.5rem;
@@ -1058,7 +1061,7 @@ a { text-decoration: none; color: inherit; }
 
 .footer-bottom {
   border-top: 1px solid var(--border);
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1187,6 +1190,7 @@ a { text-decoration: none; color: inherit; }
     transform: none;
     width: 100%;
     margin-top: 2.25rem;
+    margin-right: 0;
     padding: 2.25rem 1.5rem;
   }
   .hero-phone-num { font-size: clamp(40px, 11vw, 58px); }
