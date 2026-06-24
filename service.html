@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service & Repair — SVI Automotive Equipment</title>
   <meta name="description" content="Professional installation, mobile repair, alignment machine service, and AC machine repairs. SVI Automotive Equipment serves all of Vancouver Island from Victoria, BC.">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -14,6 +14,8 @@
     <a href="index.html" class="nav-logo">
       <img src="assets/logo-full.png" alt="SVI Automotive Equipment">
     </a>
+    <input type="checkbox" id="navtoggle" class="nav-toggle-cb" aria-hidden="true">
+    <label for="navtoggle" class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2" aria-hidden="true"></i></label>
     <div class="nav-links">
       <a href="vehicle-lifts.html">Vehicle Lifts</a>
       <a href="tire-changers.html">Tire Changers</a>
@@ -99,7 +101,7 @@
   <section class="section section-alt">
     <div class="section-label">The Process</div>
     <h2 class="section-h2">How It Works</h2>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)">
+    <div class="grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)">
       <div style="background:var(--black);padding:2rem 1.5rem">
         <div style="font-family:var(--font-display);font-weight:900;font-size:48px;color:var(--surface-2);line-height:1;margin-bottom:1rem">01</div>
         <h4 style="font-family:var(--font-display);font-weight:700;font-size:16px;text-transform:uppercase;color:var(--white);letter-spacing:0.5px;margin-bottom:0.5rem">Call or Email</h4>
@@ -125,7 +127,7 @@
 
   <!-- SERVICE AREA -->
   <section class="section">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
       <div>
         <div class="section-label">Coverage Area</div>
         <h2 class="section-h2" style="margin-bottom:1.25rem">All of<br>Vancouver Island</h2>

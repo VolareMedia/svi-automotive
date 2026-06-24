@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Financing — SVI Automotive Equipment</title>
   <meta name="description" content="Get in touch with SVI Automotive Equipment. Request a quote, book a service call, or ask about financing. Victoria, BC — (250) 857-4665.">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -14,6 +14,8 @@
     <a href="index.html" class="nav-logo">
       <img src="assets/logo-full.png" alt="SVI Automotive Equipment">
     </a>
+    <input type="checkbox" id="navtoggle" class="nav-toggle-cb" aria-hidden="true">
+    <label for="navtoggle" class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2" aria-hidden="true"></i></label>
     <div class="nav-links">
       <a href="vehicle-lifts.html">Vehicle Lifts</a>
       <a href="tire-changers.html">Tire Changers</a>
@@ -56,7 +58,7 @@
       <div class="form-panel">
         <div class="section-label" style="margin-bottom:1.5rem">Send a Message</div>
         <form action="#" method="POST">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1px">
+          <div class="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1px">
             <div class="form-group" style="background:var(--black);padding:1.25rem 1rem;margin:0">
               <label for="first-name">First Name</label>
               <input type="text" id="first-name" name="first_name" placeholder="Bruce" required>
