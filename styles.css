@@ -1073,6 +1073,24 @@ a { text-decoration: none; color: inherit; }
 .form-group textarea:focus { border-color: var(--red); }
 .form-group textarea { resize: vertical; min-height: 120px; }
 
+/* ── LIGHT FORM PANEL (contact) ── */
+.form-panel.light { background: #f4f5f7; }
+.form-panel.light .section-label { color: var(--red); }
+.form-panel.light .form-group label { color: #1a1a1a; }
+.form-panel.light .form-group input,
+.form-panel.light .form-group select,
+.form-panel.light .form-group textarea {
+  background: #ffffff;
+  border: 1px solid #cfd2d6;
+  color: #141414;
+}
+.form-panel.light .form-group input::placeholder,
+.form-panel.light .form-group textarea::placeholder { color: #9aa0a6; }
+.form-panel.light .form-group input:focus,
+.form-panel.light .form-group select:focus,
+.form-panel.light .form-group textarea:focus { border-color: var(--red); }
+.form-panel.light select { color: #141414; }
+
 .info-block { margin-bottom: 2rem; }
 .info-block h4 {
   font-family: var(--font-display);
