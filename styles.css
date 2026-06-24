@@ -168,10 +168,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--gray-mid);
 }
 .atlas-strip-dealer {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.9;
+  display: none;
 }
 
 .nav-logo { flex-shrink: 0; }
@@ -655,23 +652,33 @@ a { text-decoration: none; color: inherit; }
 /* ── PRODUCT HERO IMAGE BAND ── */
 .section-img-band {
   width: 100%;
-  height: 460px;
+  background: #ffffff;
+  padding: 2.5rem var(--gutter);
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-img-band img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 45%;
+  max-width: 1040px;
+  height: auto;
+  object-fit: contain;
   opacity: 1;
 }
+.section-img-band::before,
 .section-img-band::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.25) 0%, transparent 18%, transparent 85%, var(--black) 100%);
+  left: 0;
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+  z-index: 2;
 }
+.section-img-band::before { top: 0; background: linear-gradient(to bottom, var(--black), transparent); }
+.section-img-band::after { bottom: 0; background: linear-gradient(to top, var(--surface), transparent); }
 
 /* ── WHY SVI ── */
 .why-grid {
