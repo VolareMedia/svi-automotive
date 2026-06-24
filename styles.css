@@ -582,7 +582,10 @@ a { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1px;
-  background: var(--border);
+  /* faded wheel fills empty cells (and 1px dividers) instead of flat grey */
+  background:
+    linear-gradient(rgba(10,10,10,0.86), rgba(10,10,10,0.86)),
+    url('https://images.pexels.com/photos/6453051/pexels-photo-6453051.jpeg?auto=compress&cs=tinysrgb&w=1600') center / cover no-repeat;
 }
 
 .product-item {
