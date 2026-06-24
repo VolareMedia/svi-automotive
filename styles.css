@@ -22,7 +22,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--black);
+  background-color: var(--black);
+  background-image:
+    linear-gradient(rgba(10,10,10,0.92), rgba(10,10,10,0.93)),
+    url('https://images.pexels.com/photos/6453051/pexels-photo-6453051.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--gray-light);
   font-family: var(--font-body);
   font-size: 15px;
@@ -480,7 +487,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ── SECTION COMMONS ── */
 .section { padding: 5rem var(--gutter); }
-.section-alt { background: var(--surface); }
+.section-alt { background: rgba(255, 255, 255, 0.035); }
 
 .section-label {
   display: flex;
@@ -1473,6 +1480,7 @@ a { text-decoration: none; color: inherit; }
   .hero-phone-sub { max-width: 100%; }
 
   /* SECTION rhythm */
+  body { background-attachment: scroll; }
   .section { padding: 3rem 1.5rem; }
   .cinematic-band { min-height: 340px; padding: 3rem 1.5rem; }
   .video-grid,
