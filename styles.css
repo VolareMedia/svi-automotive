@@ -1709,3 +1709,50 @@ a { text-decoration: none; color: inherit; }
   .lift-top { grid-template-columns: 1fr; gap: 2rem; }
   .lift-img-box { min-height: 240px; padding: 1.5rem; }
 }
+
+/* ---- Enriched lift page (overview / features / specs / warranty) ---- */
+.lift-subnav {
+  position: sticky; top: 90px; z-index: 50;
+  display: flex; gap: 0.6rem; flex-wrap: wrap;
+  background: rgba(10,10,10,0.94); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border); padding: 0.8rem var(--gutter);
+}
+.lift-subnav a {
+  font-family: var(--font-display); font-size: 13px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gray-mid); font-weight: 600;
+  padding: 7px 15px; border: 1px solid var(--border); transition: color 0.2s, border-color 0.2s;
+}
+.lift-subnav a:hover { color: #fff; border-color: var(--red); }
+.lift-section { scroll-margin-top: 160px; margin-top: 3.5rem; }
+.lift-overview p { font-size: 16.5px; line-height: 1.85; color: var(--gray-light); margin-bottom: 1.25rem; max-width: 840px; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 0.5rem 2.5rem; max-width: 980px; }
+.feature-item { display: flex; gap: 12px; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid var(--border); }
+.feature-item i { color: var(--red); font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.feature-item span { color: var(--gray-light); font-size: 15px; line-height: 1.55; }
+.lift-warranty { border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--surface); max-width: 900px; }
+.lift-warranty summary { cursor: pointer; list-style: none; padding: 1.35rem 1.75rem; font-family: var(--font-display); font-size: 21px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; display: flex; justify-content: space-between; align-items: center; }
+.lift-warranty summary::-webkit-details-marker { display: none; }
+.lift-warranty summary::after { content: "+"; color: var(--red); font-size: 26px; line-height: 1; }
+.lift-warranty[open] summary::after { content: "\2212"; }
+.lift-warranty-body { padding: 0 1.75rem 1.75rem; color: var(--gray-mid); font-size: 15px; line-height: 1.75; }
+.lift-warranty-body h4 { color: #fff; font-family: var(--font-display); font-size: 15px; text-transform: uppercase; letter-spacing: 1px; margin: 1.4rem 0 0.6rem; }
+.lift-warranty-body ul { list-style: none; margin: 0.4rem 0 0.5rem; padding: 0; }
+.lift-warranty-body li { position: relative; padding-left: 1.4rem; margin-bottom: 0.4rem; }
+.lift-warranty-body li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 7px; height: 7px; background: var(--red); }
+.lift-warranty-body strong { color: #fff; }
+
+/* ---- Enriched lift page: tighter spacing + variety ---- */
+.lift-section { margin-top: 0; }
+.lift-pad { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+.lift-pad .section-h2 { margin-bottom: 1.1rem; }
+.lift-spec-war { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 3rem; align-items: start; }
+.lift-spec-war .section-label { margin-top: 0; }
+.lift-overview p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) { .lift-spec-war { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+/* ---- Features section: white banner variant ---- */
+.lift-features-light { background: #ffffff; }
+.lift-features-light .section-h2 { color: #0A0A0A; }
+.lift-features-light .feature-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.lift-features-light .feature-item span { color: #1A1A1A; }
+.lift-features-light .feature-item i { color: var(--red); }
