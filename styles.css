@@ -1682,3 +1682,30 @@ a { text-decoration: none; color: inherit; }
 .faq-item summary:hover { color: var(--red); }
 .faq-item p { padding: 0 2.5rem 1.5rem 0; margin: 0; color: var(--gray-mid); font-size: 15px; line-height: 1.8; }
 .faq-item p a { color: var(--red); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- Individual lift detail page ---- */
+.lift-wrap { max-width: 1120px; margin: 0 auto; }
+.lift-top { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 3rem; align-items: start; }
+.lift-img-box {
+  background: #fff; border: 1px solid var(--border); padding: 2.5rem;
+  display: flex; align-items: center; justify-content: center; min-height: 360px;
+}
+.lift-img-box img { max-width: 100%; max-height: 440px; width: auto; object-fit: contain; }
+.lift-lead { font-size: 17px; line-height: 1.85; color: var(--gray-light); margin-bottom: 1.5rem; }
+.lift-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.lift-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--surface-2); border: 1px solid var(--border); padding: 8px 13px;
+  font-family: var(--font-display); font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gray-mid); font-weight: 600;
+}
+.lift-badge i { color: var(--red); font-size: 16px; }
+.lift-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 1.1rem; }
+.lift-note { font-size: 14px; color: var(--gray-mid); }
+.lift-note a { color: var(--red); text-decoration: underline; }
+.lift-specs { margin-top: 3rem; }
+.lift-spec-table { width: 100%; max-width: 720px; }
+@media (max-width: 860px) {
+  .lift-top { grid-template-columns: 1fr; gap: 2rem; }
+  .lift-img-box { min-height: 240px; padding: 1.5rem; }
+}
