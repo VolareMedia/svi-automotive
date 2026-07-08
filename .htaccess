@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Canonical host: force www -> non-www (https)
+RewriteCond %{HTTP_HOST} ^www\.sviautomotive\.com$ [NC]
+RewriteRule ^(.*)$ https://sviautomotive.com/$1 [R=301,L]
+
+# --- Old Wix site URLs still in Google's index -> current pages ---
+RewriteRule ^vehicle-lifts/?$ /vehicle-lifts.html [R=301,L]
+RewriteRule ^vehicle-lift-install-and-repairs/?$ /service.html [R=301,L]
+RewriteRule ^services?/?$ /service.html [R=301,L]
+RewriteRule ^automotive-equipment-sales-and-service/?$ / [R=301,L]
+RewriteRule ^tire-changer-and-balancer-repairs/?$ /service.html [R=301,L]
+RewriteRule ^alignment-machine-service/?$ /service.html [R=301,L]
+RewriteRule ^black-and-silver-car-side-mirror/?$ /vehicle-lifts.html [R=301,L]
+RewriteRule ^blog-list/?$ /blog.html [R=301,L]
+RewriteRule ^blog/?$ /blog.html [R=301,L]
+RewriteRule ^contact/?$ /contact.html [R=301,L]
