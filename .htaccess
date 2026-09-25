@@ -15,3 +15,12 @@ RewriteRule ^black-and-silver-car-side-mirror/?$ /vehicle-lifts.html [R=301,L]
 RewriteRule ^blog-list/?$ /blog.html [R=301,L]
 RewriteRule ^blog/?$ /blog.html [R=301,L]
 RewriteRule ^contact/?$ /contact.html [R=301,L]
+
+# --- Old Wix product URLs (GSC 404s, 2026-09-25) -> current lift pages ---
+RewriteRule ^atlas-pvl12-black/?$ /lift-atlas-platinum-pvl-12-black.html [R=301,L]
+RewriteRule ^atlas-pvl12/?$ /lift-atlas-platinum-pvl-12.html [R=301,L]
+RewriteRule ^atlas-bp8000/?$ /lift-atlas-bp8000.html [R=301,L]
+RewriteRule ^atlas-bp9000/?$ /lift-atlas-bp9000.html [R=301,L]
+RewriteRule ^rpm-s24ti/?$ /service.html [R=301,L]
+# Any other old Wix product slug (no file extension) -> lift catalog
+RewriteRule ^(atlas|rpm|product-page)[-/][^.]*$ /vehicle-lifts.html [R=301,L]
