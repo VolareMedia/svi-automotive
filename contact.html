@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) - Google Ads AW-17261095109 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17261095109"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17261095109');
+    // Conversion: phone number tapped (tel: links anywhere on the page)
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (a) gtag('event', 'conversion', {'send_to': 'AW-17261095109/N2NxCLPBroUdEMXR3aZA'});
+    });
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -273,6 +286,7 @@
           .then(function (data) {
             if (data.success) {
               form.reset();
+              if (window.gtag) gtag('event', 'conversion', {'send_to': 'AW-17261095109/-s4uCK3BroUdEMXR3aZA'});
               status.className = 'form-status success';
               status.textContent = "Thanks — your message has been sent. We'll be in touch shortly.";
             } else {

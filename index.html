@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) - Google Ads AW-17261095109 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17261095109"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17261095109');
+    // Conversion: phone number tapped (tel: links anywhere on the page)
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (a) gtag('event', 'conversion', {'send_to': 'AW-17261095109/N2NxCLPBroUdEMXR3aZA'});
+    });
+  </script>
   <meta name="google-site-verification" content="IFYNhvcViA3VMniRiCWcbq95wUkY7KWgAQsqwOWn_Dw" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
