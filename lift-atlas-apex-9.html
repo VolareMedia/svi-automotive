@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=36">
+  <link rel="stylesheet" href="styles.css?v=37">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <script type="application/ld+json">
 {
@@ -55,28 +55,53 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Overall Size",
-      "value": "121 7/8\" W \u00d7 243\" L (with ramps)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "Lifting Height",
-      "value": "80 7/8\" (6' 8 7/8\")"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Runway Length",
-      "value": "188 1/2\""
+      "value": "86\" (7' 2\") to top of runway"
     },
     {
       "@type": "PropertyValue",
       "name": "Clearance Under Runways",
-      "value": "75 1/2\""
+      "value": "81 1/4\" (6' 9 1/4\")"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Column Height",
+      "value": "99\" (8' 3\")"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Width",
+      "value": "121 7/8\" (133 7/8\" with motor)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Length",
+      "value": "204\" (227 1/2\" with ramps)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Runway Length / Width",
+      "value": "196 1/2\" / 20 1/8\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Width Between Runways",
+      "value": "38 7/8\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Maximum Wheelbase",
+      "value": "184\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Drive-Thru",
+      "value": "98 5/8\""
     },
     {
       "@type": "PropertyValue",
       "name": "Power",
-      "value": "110V single phase, 30A"
+      "value": "110V, 30A breaker"
     },
     {
       "@type": "PropertyValue",
@@ -86,7 +111,7 @@
     {
       "@type": "PropertyValue",
       "name": "Warranty",
-      "value": "5 yr structural / 2 yr cylinders / 1 yr electrical"
+      "value": "5 yr structural / 2 yr cylinders / 1 yr power unit"
     }
   ]
 }
@@ -111,6 +136,12 @@
     {
       "@type": "ListItem",
       "position": 3,
+      "name": "4-Post Lifts",
+      "item": "https://sviautomotive.com/four-post-lifts.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
       "name": "Atlas Apex 9",
       "item": "https://sviautomotive.com/lift-atlas-apex-9.html"
     }
@@ -128,7 +159,18 @@
     <label for="navtoggle" class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2" aria-hidden="true"></i></label>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="vehicle-lifts.html" class="active">Vehicle Lifts</a>
+      <div class="nav-dd">
+        <a href="vehicle-lifts.html" class="nav-dd-top active">Vehicle Lifts <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
+        <div class="nav-dd-menu">
+          <a href="two-post-lifts.html"><b>2-Post Lifts</b><span>Overhead &amp; baseplate</span></a>
+          <a href="four-post-lifts.html"><b>4-Post Lifts</b><span>Service, alignment &amp; parking</span></a>
+          <a href="heavy-duty-fleet-lifts.html"><b>Heavy-Duty &amp; Fleet</b><span>Trucks, fleets &amp; alignment</span></a>
+          <a href="mid-rise-portable-lifts.html"><b>Mid-Rise &amp; Portable</b><span>Roll it where you need it</span></a>
+          <a href="home-garage-lifts.html"><b>Home Garage &amp; DIY</b><span>Our picks for hobbyists</span></a>
+          <a href="motorcycle-lifts.html"><b>Motorcycle Lifts</b><span><em class="nav-dd-soon">Coming soon</em></span></a>
+          <a href="vehicle-lifts.html" class="nav-dd-all">All Vehicle Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
       <a href="service.html">Service</a>
       <a href="financing.html">Financing</a>
       <a href="blog.html">Shop News</a>
@@ -156,6 +198,8 @@
         <a href="index.html">Home</a>
         <i class="ti ti-chevron-right" aria-hidden="true"></i>
         <a href="vehicle-lifts.html">Vehicle Lifts</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <a href="four-post-lifts.html">4-Post Lifts</a>
         <i class="ti ti-chevron-right" aria-hidden="true"></i>
         <span>Atlas Apex 9</span>
       </div>
@@ -194,12 +238,12 @@
     </div>
   </div>
 
-  <section class="section section-alt lift-pad lift-section lift-overview" id="overview">
+  <section class="section section-alt lift-pad lift-section lift-overview photo-bg" id="overview" style="--bg-img:url('assets/bg-shop-wide.jpg');--bg-pos:center 78%">
     <div class="lift-wrap">
       <div class="section-label">Overview</div>
       <h2 class="section-h2">About the Atlas Apex 9</h2>
-        <p>It's engineered for confidence, with a double-lock safety system and ALI certification, and it ships with the accessories you need to get going — wheel chocks and drip trays included. Backed by Atlas warranty with SVI installation and service across Vancouver Island.</p>
-        <p>If you've ever wished your garage had one more parking spot, this is it — stack two vehicles in a single bay, or keep a project safely up and out of the way while you work on your daily driver below.</p>
+        <p>It's engineered for confidence, with a lock ladder design, double-lock safety system, single-point lock release and ALI certification. It ships with what you need to get going: four wheel stops, two rubber wheel chocks, drip trays, jack trays and a caster kit with polyurethane wheels so you can move it. Anchor bolts are optional.</p>
+        <p>With 81 1/4" of clearance under the runways, you can stack two vehicles in a single bay, or keep a project safely up and out of the way while you work on your daily driver below. Atlas builds it for homeowners and restoration shops, not for commercial bays that cycle the lift many times a day.</p>
     </div>
   </section>
 
@@ -209,10 +253,12 @@
       <h2 class="section-h2">Built-In Advantages</h2>
       <div class="feature-grid">
         <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>9,000 lb ALI-certified four-post parking lift</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Double-lock safety system</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Secure vehicle storage + easy maintenance access</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Wheel chocks and drip trays included</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Ideal for home garages and restoration shops</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>81 1/4" clearance under the runways</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Lock ladder design with double-lock safety system</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Single-point lock release</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Caster kit included, so it can be moved (anchor bolts optional)</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Wheel stops, wheel chocks, drip trays and jack trays included</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Built for home garages and restoration shops</span></div>
         <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Professional installation available</span></div>
       </div>
     </div>
@@ -226,13 +272,18 @@
         <table class="spec-table lift-spec-table">
             <tr><td>Lifting Capacity</td><td>9,000 lbs</td></tr>
             <tr><td>Type</td><td>Four-post parking / hobbyist</td></tr>
-            <tr><td>Overall Size</td><td>121 7/8" W × 243" L (with ramps)</td></tr>
-            <tr><td>Lifting Height</td><td>80 7/8" (6' 8 7/8")</td></tr>
-            <tr><td>Runway Length</td><td>188 1/2"</td></tr>
-            <tr><td>Clearance Under Runways</td><td>75 1/2"</td></tr>
-            <tr><td>Power</td><td>110V single phase, 30A</td></tr>
+            <tr><td>Lifting Height</td><td>86" (7' 2") to top of runway</td></tr>
+            <tr><td>Clearance Under Runways</td><td>81 1/4" (6' 9 1/4")</td></tr>
+            <tr><td>Column Height</td><td>99" (8' 3")</td></tr>
+            <tr><td>Overall Width</td><td>121 7/8" (133 7/8" with motor)</td></tr>
+            <tr><td>Overall Length</td><td>204" (227 1/2" with ramps)</td></tr>
+            <tr><td>Runway Length / Width</td><td>196 1/2" / 20 1/8"</td></tr>
+            <tr><td>Width Between Runways</td><td>38 7/8"</td></tr>
+            <tr><td>Maximum Wheelbase</td><td>184"</td></tr>
+            <tr><td>Drive-Thru</td><td>98 5/8"</td></tr>
+            <tr><td>Power</td><td>110V, 30A breaker</td></tr>
             <tr><td>Certification</td><td>ALI Certified</td></tr>
-            <tr><td>Warranty</td><td>5 yr structural / 2 yr cylinders / 1 yr electrical</td></tr>
+            <tr><td>Warranty</td><td>5 yr structural / 2 yr cylinders / 1 yr power unit</td></tr>
         </table>
       </div>
       <div>
@@ -255,31 +306,31 @@
         <li><strong>BLUE 2+</strong> — 2-year extended coverage</li>
         <li><strong>PLATINUM 3+</strong> — 3-year extended coverage</li>
       </ul>
-      <p>Ask us which program fits your shop. Warranty terms are set by Atlas Automotive Equipment and subject to their terms and conditions; SVI Automotive Equipment handles local warranty service and support.</p>
+      <p>Ask us which program fits your shop. Warranty terms are set by Atlas Automotive Equipment and subject to their terms and conditions (the limited warranty covers parts, not labour); SVI Automotive Equipment handles local warranty service and support.</p>
     </div>
   </details>
       </div>
     </div>
   </section>
 
-  <section class="section lift-pad">
+  <section class="section lift-pad photo-bg bg-full" style="--bg-img:url('assets/bg-ph8s-front.jpg')">
     <div class="section-label">More Lifts</div>
     <h2 class="section-h2">Other Vehicle Lifts</h2>
     <div class="blog-grid">
       <a href="lift-atlas-garage-pro-8000.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=294,fit=crop/YD0pxKZ31vtz33Og/moved-45dc49e120db256ae502a2e83717ecd2-PkF4waJ6FVYbFoF3.png" alt="Atlas Garage Pro 8000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Garage Pro 8000</h3><p>Professional-grade 4-post lift built for high-volume shop environments.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+        <div class="blog-card-img"><span class="blog-card-cat">4-Post Lift</span><img src="assets/atlas-garage-pro-8000.jpg" alt="Atlas Garage Pro 8000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Garage Pro 8000</h3><p>8,000 lb four-post storage and service lift for homeowners and restoration shops.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
       </a>
-      <a href="lift-atlas-bp8000.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="assets/bp8000.jpg" alt="Atlas BP8000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas BP8000</h3><p>8,000 lb two-post bottom plate lift — 108" (9-foot) total column height for installation in garages with ceilings as low as 9 feet 3 inches.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+      <a href="lift-performance-hoist-ph8s.html" class="blog-card">
+        <div class="blog-card-img"><span class="blog-card-cat">4-Post Lift</span><img src="assets/ph8s-install-stacked.jpg" alt="Performance Hoist PH8S" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Performance Hoist Lift</div><h3>Performance Hoist PH8S</h3><p>8,000 lb four-post parking lift from aftermarket brand Performance Hoist — the lift that turns one bay into two.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
       </a>
-      <a href="lift-atlas-bp9000.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="assets/bp9000.jpeg" alt="Atlas BP9000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas BP9000</h3><p>9,000 lb bottom plate two-post lift — more capacity than the BP8000 for heavier vehicles while keeping the low-profile column design that works in standard garage ceiling heights.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+      <a href="lift-atlas-platinum-pvl-14.html" class="blog-card">
+        <div class="blog-card-img"><span class="blog-card-cat">4-Post Lift</span><img src="assets/atlas-pvl-14.jpg" alt="Atlas Platinum PVL-14" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Platinum PVL-14</h3><p>14,000 lb ALI-certified, commercial-grade four-post.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
       </a>
     </div>
-    <div style="margin-top:1.75rem"><a href="vehicle-lifts.html" class="card-link">View all vehicle lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+    <div style="margin-top:1.75rem;display:flex;gap:2rem;flex-wrap:wrap"><a href="four-post-lifts.html" class="card-link">All 4-Post Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a><a href="vehicle-lifts.html" class="card-link">View all vehicle lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
   </section>
 
   <section class="cta-banner">
@@ -309,6 +360,12 @@
       <div class="footer-col">
         <h5>Equipment</h5>
         <a href="vehicle-lifts.html">Vehicle Lifts</a>
+        <a href="two-post-lifts.html">2-Post Lifts</a>
+        <a href="four-post-lifts.html">4-Post Lifts</a>
+        <a href="heavy-duty-fleet-lifts.html">Heavy-Duty &amp; Fleet</a>
+        <a href="mid-rise-portable-lifts.html">Mid-Rise &amp; Portable</a>
+        <a href="home-garage-lifts.html">Home Garage &amp; DIY</a>
+        <a href="motorcycle-lifts.html">Motorcycle Lifts</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>

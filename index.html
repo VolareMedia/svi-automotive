@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=36">
+  <link rel="stylesheet" href="styles.css?v=37">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <script type="application/ld+json">
 {
@@ -160,9 +160,20 @@
     <label for="navtoggle" class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2" aria-hidden="true"></i></label>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="vehicle-lifts.html">Vehicle Lifts</a>
+      <div class="nav-dd">
+        <a href="vehicle-lifts.html" class="nav-dd-top">Vehicle Lifts <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
+        <div class="nav-dd-menu">
+          <a href="two-post-lifts.html"><b>2-Post Lifts</b><span>Overhead &amp; baseplate</span></a>
+          <a href="four-post-lifts.html"><b>4-Post Lifts</b><span>Service, alignment &amp; parking</span></a>
+          <a href="heavy-duty-fleet-lifts.html"><b>Heavy-Duty &amp; Fleet</b><span>Trucks, fleets &amp; alignment</span></a>
+          <a href="mid-rise-portable-lifts.html"><b>Mid-Rise &amp; Portable</b><span>Roll it where you need it</span></a>
+          <a href="home-garage-lifts.html"><b>Home Garage &amp; DIY</b><span>Our picks for hobbyists</span></a>
+          <a href="motorcycle-lifts.html"><b>Motorcycle Lifts</b><span><em class="nav-dd-soon">Coming soon</em></span></a>
+          <a href="vehicle-lifts.html" class="nav-dd-all">All Vehicle Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
       <a href="service.html">Service</a>
-        <a href="financing.html">Financing</a>
+      <a href="financing.html">Financing</a>
       <a href="blog.html">Shop News</a>
     </div>
     <div class="nav-divider"></div>
@@ -237,37 +248,92 @@
   </div>
 
   <!-- PRODUCT CATEGORIES -->
-  <section class="section">
+  <!-- SHOP BY LIFT TYPE -->
+  <section class="section photo-bg" style="--bg-img:url('assets/bg-shop-lift-row.jpg');--bg-pos:center 18%">
+    <div class="section-label">Shop by Lift Type</div>
+    <h2 class="section-h2">Find Your Lift</h2>
+    <div class="cat-grid">
+      <a href="two-post-lifts.html" class="cat-tile is-feature">
+        <div class="cat-tile-media"><img src="assets/atlas-pvl-10.jpg" alt="Atlas two-post overhead lift raising a pickup truck" loading="lazy"></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">10 models · Overhead &amp; baseplate</div>
+          <h3>2-Post Lifts</h3>
+          <p>The everyday workhorse. Full underbody access for brakes, exhaust and suspension. Atlas Platinum PVL overhead lifts, plus baseplate models for lower ceilings.</p>
+          <span class="card-link">Shop 2-Post Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="four-post-lifts.html" class="cat-tile is-feature">
+        <div class="cat-tile-media"><img src="https://cdn11.bigcommerce.com/s-xnz1t/products/1102/images/7987/ATTD-APEX9-02__82964.1606778274.451.416.jpg" alt="Atlas four-post lift with a truck parked above an SUV" loading="lazy"></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">8 models · Service, alignment &amp; parking</div>
+          <h3>4-Post Lifts</h3>
+          <p>Drive on and lift on the wheels. Steady for alignments, oil changes and heavy trucks, and a second parking spot in the same bay.</p>
+          <span class="card-link">Shop 4-Post Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="heavy-duty-fleet-lifts.html" class="cat-tile">
+        <div class="cat-tile-media"><img src="assets/atlas-pvl-14.jpg" alt="Atlas Platinum PVL-14 four-post lift raising a box truck" loading="lazy"></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">12 models · Trucks &amp; fleets</div>
+          <h3>Heavy-Duty &amp; Fleet</h3>
+          <p>Commercial-grade lifts for service trucks, vans and fleet vehicles from 10,000 to 15,000 lb, plus truck-ready alignment lifts.</p>
+          <span class="card-link">Shop Heavy-Duty <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="mid-rise-portable-lifts.html" class="cat-tile">
+        <div class="cat-tile-media"><img src="https://cdn11.bigcommerce.com/s-xnz1t/images/stencil/1280x1280/products/182/1089/ATTD-7K-KWIK-BAY-2__32149.1508977647.jpg" alt="Atlas Kwik Bay portable mid-rise lift under an SUV" loading="lazy"></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">2 models · No permanent install</div>
+          <h3>Mid-Rise &amp; Portable</h3>
+          <p>Roll it into place, lift to a comfortable working height, then roll it out of the way.</p>
+          <span class="card-link">Shop Mid-Rise <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="home-garage-lifts.html" class="cat-tile">
+        <div class="cat-tile-media"><img src="assets/atlas-garage-pro-8000.jpg" alt="Atlas Garage Pro 8000 four-post lift with two cars stacked" loading="lazy"></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">6 picks · 110V options</div>
+          <h3>Home Garage &amp; DIY</h3>
+          <p>Our picks for hobbyists: parking lifts, low-ceiling lifts and portable lifts that fit a home garage.</p>
+          <span class="card-link">See the Picks <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="motorcycle-lifts.html" class="cat-tile">
+        <div class="cat-tile-media"><span class="cat-tile-badge">Coming Soon</span><i class="ti ti-motorbike cat-tile-icon" aria-hidden="true"></i></div>
+        <div class="cat-tile-body">
+          <div class="cat-tile-meta">New to SVI</div>
+          <h3>Motorcycle Lifts</h3>
+          <p>A motorcycle lift is joining the lineup. Call or text Bruce for details and availability.</p>
+          <span class="card-link">Learn More <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+    </div>
+    <div class="cat-all-row"><a href="vehicle-lifts.html" class="card-link">View all vehicle lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+  </section>
+
+  <section class="section section-alt photo-bg" style="--bg-img:url('assets/bg-shop-lift-row.jpg');--bg-pos:right top">
     <div class="section-label">What We Do</div>
     <h2 class="section-h2">Lifts, Service &amp; Financing</h2>
     <div class="product-grid">
       <div class="product-card" style="padding:0;overflow:hidden">
-        <div style="height:220px;overflow:hidden;position:relative;background:#0D0D0D">
-          <img src="https://cdn11.bigcommerce.com/s-xnz1t/images/stencil/1280x1280/products/668/8298/AP-PVL10-02__81400.1710517079.jpg" alt="Atlas vehicle lift" style="width:100%;height:100%;object-fit:contain;padding:1rem;transition:transform 0.3s ease">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.6) 0%,transparent 60%)"></div>
-        </div>
-        <div style="padding:2rem 1.75rem">
+        <div class="card-media"><img src="assets/lift-card-truck.jpg" alt="Atlas two-post lift raising a pickup truck" loading="lazy"></div>
+        <div class="product-card-body">
           <h3>Vehicle Lifts</h3>
-          <p>Two-post, four-post, and portable lifts from Atlas — ALI-certified, in stock, with industry-leading warranties. Atlas Platinum PVL series through to the Garage Pro 8000.</p>
+          <p>Two-post, four-post, mid-rise and portable lifts. ALI-certified Atlas models in stock with industry-leading warranties, plus our picks for home garages.</p>
           <a href="vehicle-lifts.html" class="card-link">View Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="product-card" style="padding:0;overflow:hidden">
-        <div style="height:220px;overflow:hidden;position:relative;background:#0D0D0D">
-          <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Automotive lift service and repair" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.6) 0%,transparent 60%)"></div>
-        </div>
-        <div style="padding:2rem 1.75rem">
+        <div class="card-media is-photo"><img src="assets/service-undercarriage.jpg" alt="Technician servicing a vehicle on a lift" loading="lazy"></div>
+        <div class="product-card-body">
           <h3>Service &amp; Repair</h3>
           <p>We install what we sell and service what we install — plus mobile repair, certified lift inspections, and alignment and AC machine service across Vancouver Island.</p>
           <a href="service.html" class="card-link">View Service <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="product-card" style="padding:0;overflow:hidden">
-        <div style="height:220px;overflow:hidden;position:relative;background:#fff">
-          <img src="assets/leaselink-logo.png" alt="Equipment financing through Lease Link Canada" style="width:100%;height:100%;object-fit:contain;padding:1.75rem;transition:transform 0.3s ease">
-        </div>
-        <div style="padding:2rem 1.75rem">
+        <div class="card-media is-logo"><img src="assets/leaselink-logo-card.png" alt="Equipment financing through Lease Link Canada" loading="lazy"></div>
+        <div class="product-card-body">
           <h3>Financing</h3>
           <p>Equip your shop now and pay over time — $0-down lease-to-own financing through Lease Link Canada, with terms up to 60 months.</p>
           <a href="financing.html" class="card-link">View Financing <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
@@ -278,7 +344,7 @@
 
   <!-- IMAGE BAND -->
   <div class="section-img-band">
-    <img src="https://cdn11.bigcommerce.com/s-xnz1t/images/stencil/1280x1280/products/668/8298/AP-PVL10-02__81400.1710517079.jpg" alt="Atlas Platinum PVL-10 two-post lift" loading="lazy">
+    <img src="assets/atlas-pvl-10.jpg" alt="Atlas Platinum PVL-10 two-post lift" loading="lazy">
     <img src="https://cdn11.bigcommerce.com/s-xnz1t/products/1095/images/12979/14OF-EXT-1__18227.1728563188.451.416.jpg" alt="Atlas four-post lift with truck" loading="lazy">
     <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=335,fit=crop/YD0pxKZ31vtz33Og/atlas-logo-P4j0pShvqRNmCcnH.png" alt="Authorized Atlas Automotive Equipment dealer" class="band-logo" loading="lazy">
     <img src="https://cdn11.bigcommerce.com/s-xnz1t/products/1106/images/8215/ATTD-APEX15-02-1__63837.1609918203.451.416.jpg" alt="Atlas two-post lift with truck" loading="lazy">
@@ -286,7 +352,7 @@
   </div>
 
   <!-- VIDEOS -->
-  <section class="section">
+  <section class="section photo-bg bg-full" style="--bg-img:url('assets/bg-lift-columns.jpg')">
     <div class="section-label">See Us In Action</div>
     <h2 class="section-h2">Watch &amp; Learn</h2>
     <div class="video-feature">
@@ -348,7 +414,7 @@
   </section>
 
   <!-- WHY SVI -->
-  <section class="section section-alt">
+  <section class="section section-alt photo-bg" style="--bg-img:url('assets/bg-shop-wide.jpg');--bg-pos:center 78%">
     <div class="section-label">Why SVI</div>
     <h2 class="section-h2">Trust, Reliability<br>&amp; Honest Pricing</h2>
     <div class="why-grid">
@@ -401,7 +467,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="section">
+  <section class="section photo-bg" style="--bg-img:url('assets/bg-2post-column.jpg')">
     <div class="section-label">FAQ</div>
     <h2 class="section-h2">Frequently Asked Questions</h2>
     <div class="faq-list">
@@ -456,6 +522,12 @@
       <div class="footer-col">
         <h5>Equipment</h5>
         <a href="vehicle-lifts.html">Vehicle Lifts</a>
+        <a href="two-post-lifts.html">2-Post Lifts</a>
+        <a href="four-post-lifts.html">4-Post Lifts</a>
+        <a href="heavy-duty-fleet-lifts.html">Heavy-Duty &amp; Fleet</a>
+        <a href="mid-rise-portable-lifts.html">Mid-Rise &amp; Portable</a>
+        <a href="home-garage-lifts.html">Home Garage &amp; DIY</a>
+        <a href="motorcycle-lifts.html">Motorcycle Lifts</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>

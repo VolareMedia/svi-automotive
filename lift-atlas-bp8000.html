@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=36">
+  <link rel="stylesheet" href="styles.css?v=37">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <script type="application/ld+json">
 {
@@ -51,7 +51,7 @@
     {
       "@type": "PropertyValue",
       "name": "Type",
-      "value": "Two-post bottom plate"
+      "value": "Two-post bottom plate (hobbyist grade)"
     },
     {
       "@type": "PropertyValue",
@@ -60,23 +60,58 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Max Lift Height",
-      "value": "75 1/2\" (86 1/2\" with adapters)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "Min. Ceiling",
       "value": "9' 3\""
     },
     {
       "@type": "PropertyValue",
+      "name": "Max Lift Height",
+      "value": "75 1/2\" (86 1/2\" with adapters)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Min Arm Height",
+      "value": "4\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Drive-Thru",
+      "value": "99\" (8' 3\")"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Inside Columns",
+      "value": "109 1/8\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Floor Width",
+      "value": "132\" (11')"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Arms",
+      "value": "Super-symmetric, 2-stage front / 3-stage rear"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Adapters",
+      "value": "Free 12-piece truck adapter set"
+    },
+    {
+      "@type": "PropertyValue",
       "name": "Power",
-      "value": "220V single phase, 30A"
+      "value": "220V single phase, 30A breaker"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Concrete",
+      "value": "4\" minimum, 3,000 psi"
     },
     {
       "@type": "PropertyValue",
       "name": "Warranty",
-      "value": "5 yr structural / 2 yr cylinders / 1 yr electrical"
+      "value": "5 yr structural / 2 yr cylinders / 1 yr power unit"
     }
   ]
 }
@@ -101,6 +136,12 @@
     {
       "@type": "ListItem",
       "position": 3,
+      "name": "2-Post Lifts",
+      "item": "https://sviautomotive.com/two-post-lifts.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
       "name": "Atlas BP8000",
       "item": "https://sviautomotive.com/lift-atlas-bp8000.html"
     }
@@ -118,7 +159,18 @@
     <label for="navtoggle" class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2" aria-hidden="true"></i></label>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="vehicle-lifts.html" class="active">Vehicle Lifts</a>
+      <div class="nav-dd">
+        <a href="vehicle-lifts.html" class="nav-dd-top active">Vehicle Lifts <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
+        <div class="nav-dd-menu">
+          <a href="two-post-lifts.html"><b>2-Post Lifts</b><span>Overhead &amp; baseplate</span></a>
+          <a href="four-post-lifts.html"><b>4-Post Lifts</b><span>Service, alignment &amp; parking</span></a>
+          <a href="heavy-duty-fleet-lifts.html"><b>Heavy-Duty &amp; Fleet</b><span>Trucks, fleets &amp; alignment</span></a>
+          <a href="mid-rise-portable-lifts.html"><b>Mid-Rise &amp; Portable</b><span>Roll it where you need it</span></a>
+          <a href="home-garage-lifts.html"><b>Home Garage &amp; DIY</b><span>Our picks for hobbyists</span></a>
+          <a href="motorcycle-lifts.html"><b>Motorcycle Lifts</b><span><em class="nav-dd-soon">Coming soon</em></span></a>
+          <a href="vehicle-lifts.html" class="nav-dd-all">All Vehicle Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
       <a href="service.html">Service</a>
       <a href="financing.html">Financing</a>
       <a href="blog.html">Shop News</a>
@@ -146,6 +198,8 @@
         <a href="index.html">Home</a>
         <i class="ti ti-chevron-right" aria-hidden="true"></i>
         <a href="vehicle-lifts.html">Vehicle Lifts</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <a href="two-post-lifts.html">2-Post Lifts</a>
         <i class="ti ti-chevron-right" aria-hidden="true"></i>
         <span>Atlas BP8000</span>
       </div>
@@ -184,7 +238,7 @@
     </div>
   </div>
 
-  <section class="section section-alt lift-pad lift-section lift-overview" id="overview">
+  <section class="section section-alt lift-pad lift-section lift-overview photo-bg" id="overview" style="--bg-img:url('assets/bg-shop-wide.jpg');--bg-pos:center 78%">
     <div class="lift-wrap">
       <div class="section-label">Overview</div>
       <h2 class="section-h2">About the Atlas BP8000</h2>
@@ -198,12 +252,14 @@
       <div class="section-label">Exclusive Features</div>
       <h2 class="section-h2">Built-In Advantages</h2>
       <div class="feature-grid">
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>8,000 lb two-post bottom-plate design</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>8,000 lb two-post bottom-plate (baseplate) design</span></div>
         <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>108" (9-foot) total column height for low ceilings</span></div>
         <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Fits ceilings as low as 9' 3"</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Full open underbody access</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Ideal for home and hobbyist garages</span></div>
-        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Professional installation included</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Super-symmetric arms: 2-stage front, 3-stage rear</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Single-point lock release and double safety lock</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Free 12-piece truck adapter set</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Hobbyist-grade lift, ideal for home garages (not for heavy commercial use)</span></div>
+        <div class="feature-item"><i class="ti ti-circle-check" aria-hidden="true"></i><span>Professional installation available</span></div>
       </div>
     </div>
   </section>
@@ -215,12 +271,19 @@
         <h2 class="section-h2">Full Specs</h2>
         <table class="spec-table lift-spec-table">
             <tr><td>Lifting Capacity</td><td>8,000 lbs</td></tr>
-            <tr><td>Type</td><td>Two-post bottom plate</td></tr>
+            <tr><td>Type</td><td>Two-post bottom plate (hobbyist grade)</td></tr>
             <tr><td>Overall Height</td><td>108" (9 feet)</td></tr>
-            <tr><td>Max Lift Height</td><td>75 1/2" (86 1/2" with adapters)</td></tr>
             <tr><td>Min. Ceiling</td><td>9' 3"</td></tr>
-            <tr><td>Power</td><td>220V single phase, 30A</td></tr>
-            <tr><td>Warranty</td><td>5 yr structural / 2 yr cylinders / 1 yr electrical</td></tr>
+            <tr><td>Max Lift Height</td><td>75 1/2" (86 1/2" with adapters)</td></tr>
+            <tr><td>Min Arm Height</td><td>4"</td></tr>
+            <tr><td>Drive-Thru</td><td>99" (8' 3")</td></tr>
+            <tr><td>Inside Columns</td><td>109 1/8"</td></tr>
+            <tr><td>Overall Floor Width</td><td>132" (11')</td></tr>
+            <tr><td>Arms</td><td>Super-symmetric, 2-stage front / 3-stage rear</td></tr>
+            <tr><td>Adapters</td><td>Free 12-piece truck adapter set</td></tr>
+            <tr><td>Power</td><td>220V single phase, 30A breaker</td></tr>
+            <tr><td>Concrete</td><td>4" minimum, 3,000 psi</td></tr>
+            <tr><td>Warranty</td><td>5 yr structural / 2 yr cylinders / 1 yr power unit</td></tr>
         </table>
       </div>
       <div>
@@ -243,31 +306,31 @@
         <li><strong>BLUE 2+</strong> — 2-year extended coverage</li>
         <li><strong>PLATINUM 3+</strong> — 3-year extended coverage</li>
       </ul>
-      <p>Ask us which program fits your shop. Warranty terms are set by Atlas Automotive Equipment and subject to their terms and conditions; SVI Automotive Equipment handles local warranty service and support.</p>
+      <p>Ask us which program fits your shop. Warranty terms are set by Atlas Automotive Equipment and subject to their terms and conditions (the limited warranty covers parts, not labour); SVI Automotive Equipment handles local warranty service and support.</p>
     </div>
   </details>
       </div>
     </div>
   </section>
 
-  <section class="section lift-pad">
+  <section class="section lift-pad photo-bg bg-full" style="--bg-img:url('assets/bg-2post-arms.jpg')">
     <div class="section-label">More Lifts</div>
     <h2 class="section-h2">Other Vehicle Lifts</h2>
     <div class="blog-grid">
-      <a href="lift-atlas-garage-pro-8000.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=294,fit=crop/YD0pxKZ31vtz33Og/moved-45dc49e120db256ae502a2e83717ecd2-PkF4waJ6FVYbFoF3.png" alt="Atlas Garage Pro 8000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Garage Pro 8000</h3><p>Professional-grade 4-post lift built for high-volume shop environments.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
-      </a>
-      <a href="lift-atlas-apex-9.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="https://cdn11.bigcommerce.com/s-xnz1t/products/1102/images/7987/ATTD-APEX9-02__82964.1606778274.451.416.jpg" alt="Atlas Apex 9" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Apex 9</h3><p>9,000 lb ALI-certified four-post parking lift built for home garages and restoration shops — secure vehicle storage with easy maintenance access.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
-      </a>
       <a href="lift-atlas-bp9000.html" class="blog-card">
-        <div class="blog-card-img"><span class="blog-card-cat">Pro & Portable Lift</span><img src="assets/bp9000.jpeg" alt="Atlas BP9000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
-        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas BP9000</h3><p>9,000 lb bottom plate two-post lift — more capacity than the BP8000 for heavier vehicles while keeping the low-profile column design that works in standard garage ceiling heights.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+        <div class="blog-card-img"><span class="blog-card-cat">2-Post Lift</span><img src="assets/atlas-bp9000.jpg" alt="Atlas BP9000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas BP9000</h3><p>Economical 9,000 lb bottom plate two-post with 9' 3 1/2" columns for ceilings as low as 9' 6".</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+      </a>
+      <a href="lift-atlas-bp12000.html" class="blog-card">
+        <div class="blog-card-img"><span class="blog-card-cat">2-Post Lift</span><img src="https://cdn11.bigcommerce.com/s-xnz1t/products/626/images/4345/ATPK-BP12K-2__38152.1508958764.451.416.jpg" alt="Atlas BP12000" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas BP12000</h3><p>12,000 lb commercial-grade baseplate two-post for shops without room for an overhead beam.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
+      </a>
+      <a href="lift-atlas-platinum-pvl-10.html" class="blog-card">
+        <div class="blog-card-img"><span class="blog-card-cat">2-Post Lift</span><img src="assets/atlas-pvl-10.jpg" alt="Atlas Platinum PVL-10" loading="lazy" style="object-fit:contain;padding:1.25rem;background:#0D0D0D"></div>
+        <div class="blog-card-body"><div class="blog-card-meta">Atlas Vehicle Lift</div><h3>Atlas Platinum PVL-10</h3><p>10,000 lb ALI-certified overhead two-post with Double-S columns.</p><span class="card-link">View Lift <i class="ti ti-arrow-right" aria-hidden="true"></i></span></div>
       </a>
     </div>
-    <div style="margin-top:1.75rem"><a href="vehicle-lifts.html" class="card-link">View all vehicle lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+    <div style="margin-top:1.75rem;display:flex;gap:2rem;flex-wrap:wrap"><a href="two-post-lifts.html" class="card-link">All 2-Post Lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a><a href="vehicle-lifts.html" class="card-link">View all vehicle lifts <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
   </section>
 
   <section class="cta-banner">
@@ -297,6 +360,12 @@
       <div class="footer-col">
         <h5>Equipment</h5>
         <a href="vehicle-lifts.html">Vehicle Lifts</a>
+        <a href="two-post-lifts.html">2-Post Lifts</a>
+        <a href="four-post-lifts.html">4-Post Lifts</a>
+        <a href="heavy-duty-fleet-lifts.html">Heavy-Duty &amp; Fleet</a>
+        <a href="mid-rise-portable-lifts.html">Mid-Rise &amp; Portable</a>
+        <a href="home-garage-lifts.html">Home Garage &amp; DIY</a>
+        <a href="motorcycle-lifts.html">Motorcycle Lifts</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>

@@ -1739,6 +1739,8 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: center; min-height: 360px;
 }
 .lift-img-box img { max-width: 100%; max-height: 440px; width: auto; object-fit: contain; }
+.lift-img-box.is-photo { padding: 0; background: #0D0D0D; }
+.lift-img-box.is-photo img { width: 100%; height: 100%; max-height: none; object-fit: cover; }
 .lift-lead { font-size: 17px; line-height: 1.85; color: var(--gray-light); margin-bottom: 1.5rem; }
 .lift-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.75rem; }
 .lift-badge {
@@ -1756,6 +1758,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 860px) {
   .lift-top { grid-template-columns: 1fr; gap: 2rem; }
   .lift-img-box { min-height: 240px; padding: 1.5rem; }
+  .lift-img-box.is-photo { padding: 0; }
 }
 
 /* ---- Enriched lift page (overview / features / specs / warranty) ---- */
@@ -1804,3 +1807,362 @@ a { text-decoration: none; color: inherit; }
 .lift-features-light .feature-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
 .lift-features-light .feature-item span { color: #1A1A1A; }
 .lift-features-light .feature-item i { color: var(--red); }
+
+/* ============ LIFT CATEGORIES (2026-09) ============ */
+
+/* Whole card is clickable: the card's own link stretches over it */
+.product-card, .product-item { cursor: pointer; }
+.product-card .card-link::after,
+.product-item .card-link::after { content: ''; position: absolute; inset: 0; z-index: 2; }
+.product-card:hover .card-link,
+.product-item:hover .card-link { gap: 10px; }
+.product-card h3, .product-item h3 { transition: color 0.2s; }
+.product-card:hover h3, .product-item:hover h3 { color: var(--red); }
+
+/* Home "What We Do" cards: identical white media plate on every card */
+.card-media {
+  aspect-ratio: 16 / 10;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.25rem;
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+.card-media.is-photo img { object-fit: cover; }
+.card-media.is-logo { padding: 2.5rem 2.25rem; }
+.product-card:hover .card-media img { transform: scale(1.04); }
+.product-card-body { padding: 2rem 1.75rem; }
+
+/* Nav dropdown (Vehicle Lifts) */
+.nav-links { align-self: stretch; align-items: center; }
+.nav-dd { position: relative; align-self: stretch; display: flex; align-items: center; }
+.nav-dd-top { display: inline-flex; align-items: center; gap: 4px; }
+.nav-dd-top i { font-size: 13px; transition: transform 0.2s; }
+.nav-dd:hover .nav-dd-top i, .nav-dd:focus-within .nav-dd-top i { transform: rotate(180deg); }
+.nav-dd-menu {
+  position: absolute;
+  top: 100%;
+  left: -1.25rem;
+  min-width: 270px;
+  background: #0E0E0E;
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--red);
+  padding: 0.4rem 0;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+  z-index: 110;
+}
+.nav-dd:hover .nav-dd-menu,
+.nav-dd:focus-within .nav-dd-menu { opacity: 1; visibility: visible; transform: none; }
+.nav-links .nav-dd-menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0.65rem 1.25rem;
+  border-left: 3px solid transparent;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.nav-dd-menu a b {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.nav-dd-menu a span { font-family: var(--font-body); font-size: 12px; color: var(--gray-dark); font-weight: 400; }
+.nav-links .nav-dd-menu a:hover,
+.nav-links .nav-dd-menu a.current { background: #161616; border-left-color: var(--red); }
+.nav-dd-menu a:hover b { color: var(--red); }
+.nav-dd-menu .nav-dd-soon { color: var(--red); font-style: normal; }
+.nav-links .nav-dd-menu a.nav-dd-all {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.3rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+/* Lift-type tiles (home page + lifts hub) */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.cat-tile {
+  grid-column: span 3;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: background 0.2s;
+}
+.cat-tile.is-feature { grid-column: span 6; }
+.cat-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--border);
+  transition: background 0.2s;
+  z-index: 1;
+}
+.cat-tile:hover { background: #161616; }
+.cat-tile:hover::before { background: var(--red); }
+.cat-tile-media {
+  height: 230px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.cat-tile.is-feature .cat-tile-media { height: 280px; }
+.cat-tile-media img {
+  max-width: 86%;
+  max-height: 86%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+.cat-tile:hover .cat-tile-media img { transform: scale(1.05); }
+.cat-tile-media .cat-tile-icon { font-size: 110px; color: #C9C9C9; transition: color 0.2s; }
+.cat-tile:hover .cat-tile-icon { color: var(--red); }
+.cat-tile-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+.cat-tile-body { padding: 1.5rem 1.75rem 1.75rem; display: flex; flex-direction: column; flex: 1; }
+.cat-tile-meta {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 0.4rem;
+}
+.cat-tile h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  transition: color 0.2s;
+}
+.cat-tile.is-feature h3 { font-size: 36px; }
+.cat-tile:hover h3 { color: var(--red); }
+.cat-tile p { font-size: 13.5px; color: var(--gray-dark); line-height: 1.7; margin-bottom: 1.25rem; flex: 1; }
+.cat-tile .card-link { align-self: flex-start; }
+.cat-tile:hover .card-link { gap: 10px; }
+.cat-all-row { margin-top: 1.75rem; }
+
+/* Product lists sized to the number of lifts in the section */
+@media (min-width: 901px) {
+  .products-list.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .products-list.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .products-list.cols-2 .product-item-img { height: 280px; }
+}
+
+/* Section heading with a link on the right */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.section-head .section-h2 { margin-bottom: 0; }
+.section-sub { font-size: 15px; color: var(--gray-mid); max-width: 640px; margin: -1.75rem 0 2.5rem; line-height: 1.75; }
+
+/* Lift-type switcher bar (hub + category pages) */
+.cat-bar {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: rgba(10,10,10,0.94);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem var(--gutter);
+}
+.cat-bar::-webkit-scrollbar { display: none; }
+.cat-bar a {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  padding: 7px 15px;
+  border: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.cat-bar a:hover { color: #fff; border-color: var(--red); }
+.cat-bar a.current { color: #fff; background: var(--red); border-color: var(--red); }
+
+/* Category page intro: copy + checklist */
+.cat-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; }
+.cat-intro-copy p { font-size: 16px; line-height: 1.85; color: var(--gray-light); margin-bottom: 1.1rem; }
+.cat-intro-copy a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+.cat-checks { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.cat-check { background: var(--surface); padding: 1.35rem 1.6rem; display: flex; gap: 1rem; align-items: flex-start; }
+.cat-check i { color: var(--red); font-size: 20px; margin-top: 2px; flex-shrink: 0; }
+.cat-check b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+.cat-check span { font-size: 13.5px; color: var(--gray-dark); line-height: 1.65; }
+
+/* Home Garage picks: quick-fact chips on cards */
+.pick-facts { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+.pick-facts span {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-light);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 4px 9px;
+}
+
+/* Coming-soon panel (motorcycle lifts) */
+.soon-panel {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+}
+.soon-panel-icon { background: #fff; display: flex; align-items: center; justify-content: center; min-height: 240px; }
+.soon-panel-icon i { font-size: 130px; color: var(--red); }
+.soon-panel-body { padding: 2.5rem 2.75rem; }
+.soon-panel-body h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.soon-panel-body p { font-size: 15px; color: var(--gray-mid); line-height: 1.8; margin-bottom: 1.5rem; max-width: 620px; }
+.soon-panel-body .hero-btns { margin: 0; }
+
+@media (max-width: 900px) {
+  .nav-links { align-self: auto; align-items: stretch; }
+  .nav-dd { flex-direction: column; align-items: stretch; align-self: auto; }
+  .nav-dd-top i { display: none; }
+  .nav-dd-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0.35rem;
+  }
+  .nav-links .nav-dd-menu a {
+    padding: 0.6rem 0.25rem 0.6rem 1.1rem;
+    border-left: 2px solid var(--surface-2);
+    border-bottom: none;
+  }
+  .nav-dd-menu a b { font-size: 14px; color: var(--gray-mid); }
+  .nav-dd-menu a span { display: none; }
+  .nav-links .nav-dd-menu a.nav-dd-all { display: none; }
+  .nav-links .nav-dd-menu a.current b { color: var(--red); }
+
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+  .cat-tile, .cat-tile.is-feature { grid-column: span 1; }
+  .cat-tile.is-feature { grid-column: span 2; }
+  .cat-tile:last-child:nth-child(odd) { grid-column: span 2; }
+  .cat-tile-media, .cat-tile.is-feature .cat-tile-media { height: 210px; }
+  .cat-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .cat-bar { padding: 0.8rem 1.25rem; }
+  .soon-panel { grid-template-columns: 1fr; }
+  .soon-panel-icon { min-height: 180px; }
+  .soon-panel-body { padding: 2rem 1.5rem; }
+  .section-sub { margin-top: -1rem; }
+}
+@media (max-width: 560px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .cat-tile, .cat-tile.is-feature, .cat-tile:last-child:nth-child(odd) { grid-column: span 1; }
+  .cat-tile h3, .cat-tile.is-feature h3 { font-size: 30px; }
+}
+
+/* ============ PHOTO TEXTURE SECTIONS (2026-09) ============
+   A zoomed-in lift photo sits behind the whole section in greyscale,
+   darkened so it reads as texture (same treatment as the SVI social ads).
+   Usage: class="section photo-bg" style="--bg-img:url('assets/bg-x.jpg')"
+   Optional: --bg-pos (focal point), --shade (0-1 darkness, default .8). */
+.photo-bg { position: relative; isolation: isolate; overflow: hidden; }
+.photo-bg::before,
+.photo-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.photo-bg::before {
+  z-index: -2;
+  background: var(--bg-img) var(--bg-pos, center) / cover no-repeat;
+  filter: grayscale(1) contrast(1.15) blur(1.5px);
+  transform: scale(1.04);
+}
+.photo-bg::after {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0) 14%, rgba(10,10,10,0) 86%, rgba(10,10,10,0.92) 100%),
+    linear-gradient(90deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.72) 45%, rgba(10,10,10,0.62) 100%),
+    rgba(10,10,10,var(--shade, 0.18));
+}
+.photo-bg .faq-item summary, .photo-bg .faq-item p { text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+@media (max-width: 900px) {
+  .photo-bg::after {
+    background:
+      linear-gradient(180deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0) 12%, rgba(10,10,10,0) 88%, rgba(10,10,10,0.92) 100%),
+      rgba(10,10,10,0.78);
+  }
+}
