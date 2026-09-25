@@ -9,9 +9,7 @@ RewriteRule ^vehicle-lifts/?$ /vehicle-lifts.html [R=301,L]
 RewriteRule ^vehicle-lift-install-and-repairs/?$ /service.html [R=301,L]
 RewriteRule ^services?/?$ /service.html [R=301,L]
 RewriteRule ^automotive-equipment-sales-and-service/?$ / [R=301,L]
-RewriteRule ^tire-changer-and-balancer-repairs/?$ /service.html [R=301,L]
 RewriteRule ^alignment-machine-service/?$ /service.html [R=301,L]
-RewriteRule ^black-and-silver-car-side-mirror/?$ /vehicle-lifts.html [R=301,L]
 RewriteRule ^blog-list/?$ /blog.html [R=301,L]
 RewriteRule ^blog/?$ /blog.html [R=301,L]
 RewriteRule ^contact/?$ /contact.html [R=301,L]
@@ -21,6 +19,11 @@ RewriteRule ^atlas-pvl12-black/?$ /lift-atlas-platinum-pvl-12-black.html [R=301,
 RewriteRule ^atlas-pvl12/?$ /lift-atlas-platinum-pvl-12.html [R=301,L]
 RewriteRule ^atlas-bp8000/?$ /lift-atlas-bp8000.html [R=301,L]
 RewriteRule ^atlas-bp9000/?$ /lift-atlas-bp9000.html [R=301,L]
-RewriteRule ^rpm-s24ti/?$ /service.html [R=301,L]
 # Any other old Wix product slug (no file extension) -> lift catalog
-RewriteRule ^(atlas|rpm|product-page)[-/][^.]*$ /vehicle-lifts.html [R=301,L]
+RewriteRule ^(atlas|product-page)[-/][^.]*$ /vehicle-lifts.html [R=301,L]
+
+# --- Old Wix pages for products SVI no longer sells: 410 Gone so Google drops them for good ---
+RewriteRule ^tire-changer-and-balancer-repairs/?$ - [G,L]
+RewriteRule ^black-and-silver-car-side-mirror/?$ - [G,L]
+RewriteRule ^rpm[-/].*$ - [G,L]
+RewriteRule ^(tire|balancer|wheel-balancer|tire-changer)[-/]?.*$ - [G,L]
